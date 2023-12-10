@@ -9,13 +9,13 @@ import Onboarding from './onboarding.png';
 import VulnHifi from './vuln-hifi.png';
 
 export {
-    Log4j1,
-    Log4j2,
-    Vulnpersona1,
-    Vulnpersona2,
-    VulnJourney,
-    VulnWire1,
-    VulnWire2,
-    Onboarding,
-    VulnHifi,
+  Log4j1,
+  Log4j2,
+  Vulnpersona1,
+  Vulnpersona2,
+  VulnJourney,
+  VulnWire1,
+  VulnWire2,
+  Onboarding,
+  VulnHifi
 };

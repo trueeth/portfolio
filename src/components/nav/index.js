@@ -6,42 +6,39 @@ import { Switch } from '../switch';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Nav = ({ toggleMode, mode, spread }) => {
-    const navigate = useNavigate();
-    return (
-        <Midi
+  const navigate = useNavigate();
+  return (
+    <Midi
+      style={{
+        mixBlendMode: 'difference'
+      }}>
+      <NavCont
+        style={{
+          mixBlendMode: 'difference'
+        }}
+        onMouseDown={(e) => {
+          e.preventDefault();
+        }}>
+        <Link
+          to="/"
+          aria-current="page"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              navigate(`/`);
+            }
+          }}>
+          <Logo
             style={{
-                mixBlendMode: 'difference',
+              position: 'relative',
+              display: 'block',
+              zIndex: 2
             }}
-        >
-            <NavCont
-                style={{
-                    mixBlendMode: 'difference',
-                }}
-                onMouseDown={(e) => {
-                    e.preventDefault();
-                }}
-            >
-                <Link
-                    to='/'
-                    aria-current='page'
-                    onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                            navigate(`/`);
-                        }
-                    }}
-                >
-                    <Logo
-                        style={{
-                            position: 'relative',
-                            display: 'block',
-                            zIndex: 2,
-                        }}
-                    />
-                </Link>
-                <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
-            </NavCont>
-        </Midi>
-    );
+          />
+        </Link>
+        <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
+      </NavCont>
+    </Midi>
+  );
 };
 
 export { Nav };
