@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React, { useState } from 'react';
 
-import { Nav, Foot, Lock } from '../components';
+import { Lock } from '../components';
 import { Spread } from '../components/switch/styles';
 import QUERIES, { Main, Midi, Full, Heading2, Paragraph, Paragraph2 } from '../theming/styles';
 import {
@@ -50,7 +50,6 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
     >
       <Lock isLocked={isLocked} setIsLocked={setIsLocked} />
       <Spread className={spreadClass} />
-      <Nav mode={mode} toggleMode={toggleMode} />
       <Midi style={{ marginBottom: 100, mixBlendMode: 'difference' }}>
         <Heading2
           style={{
@@ -501,7 +500,6 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
           </div>
         </FlexGroup>
       </Midi>
-      <Foot />
     </Main>
   );
 };

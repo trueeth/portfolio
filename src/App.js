@@ -3,9 +3,10 @@ import { ThemeProvider } from 'styled-components';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 import { useDarkMode } from './hooks';
+import { Layout } from './components';
 import GlobalStyles from './theming/global';
 import lightTheme, { darkTheme } from './theming/themeContext';
-import { EA1, Movie, Landing, VulnPage, AppWrapper, DevopsPage } from './pages';
+import { EA1, Movie, Landing, VulnPage, DevopsPage } from './pages';
 
 const App = () => {
   const [mode, toggleMode, spread, componentMounted, setDisableScroll] = useDarkMode();
@@ -17,55 +18,39 @@ const App = () => {
     <ThemeProvider theme={mode === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
       <BrowserRouter>
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <AppWrapper>
+        <Layout>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
                 <Landing
                   setDisableScroll={setDisableScroll}
                   spread={spread}
                   mode={mode}
                   toggleMode={toggleMode}
                 />
-              </AppWrapper>
-            }
-          />
-          <Route
-            path="/movie"
-            element={
-              <AppWrapper>
-                <Movie spread={spread} mode={mode} toggleMode={toggleMode} />
-              </AppWrapper>
-            }
-          />
-          <Route
-            path="/vuln"
-            element={
-              <AppWrapper>
-                <VulnPage spread={spread} mode={mode} toggleMode={toggleMode} />
-              </AppWrapper>
-            }
-          />
-          <Route
-            path="/devops"
-            element={
-              <AppWrapper>
-                <DevopsPage spread={spread} mode={mode} toggleMode={toggleMode} />
-              </AppWrapper>
-            }
-          />
+              }
+            />
+            <Route
+              path="/movie"
+              element={<Movie spread={spread} mode={mode} toggleMode={toggleMode} />}
+            />
+            <Route
+              path="/vuln"
+              element={<VulnPage spread={spread} mode={mode} toggleMode={toggleMode} />}
+            />
+            <Route
+              path="/devops"
+              element={<DevopsPage spread={spread} mode={mode} toggleMode={toggleMode} />}
+            />
 
-          <Route
-            path="/ea1"
-            element={
-              <AppWrapper>
-                <EA1 spread={spread} mode={mode} toggleMode={toggleMode} />
-              </AppWrapper>
-            }
-          />
-        </Routes>
+            <Route
+              path="/ea1"
+              element={<EA1 spread={spread} mode={mode} toggleMode={toggleMode} />}
+            />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </ThemeProvider>
   );

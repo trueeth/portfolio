@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Project } from '../components';
 import { Kap, EA1Image } from '../images';
-import { Nav, Foot, Project } from '../components';
 import { Spread } from '../components/switch/styles';
 import QUERIES, { Main, Midi, Full, Heading, Heading1, Paragraph } from '../theming/styles';
 
@@ -41,7 +41,6 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
       }}
     >
       <Spread className={spreadClass} />
-      <Nav mode={mode} toggleMode={toggleMode} />
       <Midi>
         <Split>
           <Heading1>
@@ -80,8 +79,6 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
           description="Reimagining the movie finding and seat selection process for movie theater applications"
         />
       </Full>
-
-      <Foot />
     </Main>
   );
 };

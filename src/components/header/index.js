@@ -1,24 +1,40 @@
-import styled from 'styled-components';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-import { NavItem } from './styles';
-import { HeaderItems } from '../../constants';
+import { Logo } from '../logo';
+import { Switch } from '../switch';
+import { NavCont } from './styles';
+import { Midi } from '../../theming/styles';
 
-const HWrapper = styled.div`
-  height: 80px,
-  width: 100%,
-  background-color: white
-`;
-
-const Header = () => {
+const Header = ({ toggleMode, mode, spread }) => {
+  const navigate = useNavigate();
   return (
-    <HWrapper>
-      <p>Scott Kapun</p>
-      {HeaderItems.map((item, index) => (
-        <NavItem key={index}>
-          <p>{item}</p>
-        </NavItem>
-      ))}
-    </HWrapper>
+    <Midi style={{ mixBlendMode: 'difference' }}>
+      <NavCont
+        onMouseDown={(e) => {
+          e.preventDefault();
+        }}
+      >
+        <Link
+          to="/"
+          aria-current="page"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              navigate(`/`);
+            }
+          }}
+        >
+          <Logo
+            style={{
+              position: 'relative',
+              display: 'block',
+              zIndex: 2,
+            }}
+          />
+        </Link>
+        <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
+      </NavCont>
+    </Midi>
   );
 };
 

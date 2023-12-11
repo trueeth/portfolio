@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Nav, Foot } from '../components';
 import { Spread } from '../components/switch/styles';
 import QUERIES, { Main, Midi, Full, Heading2, Paragraph, Paragraph2 } from '../theming/styles';
 import {
@@ -48,7 +47,6 @@ const Movie = ({ toggleMode, mode, spread }) => {
   return (
     <Main style={{ position: 'relative' }}>
       <Spread className={spreadClass} />
-      <Nav mode={mode} toggleMode={toggleMode} />
       <Midi style={{ marginBottom: 100, mixBlendMode: 'difference' }}>
         <Heading2
           style={{
@@ -713,7 +711,6 @@ const Movie = ({ toggleMode, mode, spread }) => {
           </div>
         </FlexGroup>
       </Midi>
-      <Foot />
     </Main>
   );
 };
