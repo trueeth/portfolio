@@ -1,5 +1,3 @@
-### Updated personal portfolio page - <a href="https://juliacodes.com">Juliacodes.com</a>
+### Updated personal portfolio page - <a href="https://scottkapun.com">scottkapun.com</a>
 
-Built by Julia Johnson using: React, Gatsby, Styled Components & Netlify
-
-![Image of Julia Codes Landing Page](https://raw.githubusercontent.com/juliajohnson18/JuliaCodesGatsby/master/juliacodesimg.png)
+Built by ScottKapun using: React, Gatsby, Styled Components & Netlify

@@ -1,8 +1,9 @@
+import { Nav } from './nav';
 import { Foot } from './foot';
 import { Logo } from './logo';
-import { Nav } from './nav';
-import { Switch } from './switch';
-import { Project } from './Project';
 import { Lock } from './lock';
+import { Switch } from './switch';
+import { Project } from './project';
+import { ScrollTop } from './scroll-top';
 
-export { Foot, Logo, Nav, Switch, Project, Lock };
+export { Nav, Foot, Logo, Lock, Switch, Project, ScrollTop };

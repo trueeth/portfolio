@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { Heading } from '../theming/styles';
+
+import { Heading } from './styles';
 
 const GlobalStyles = createGlobalStyle`
     * {
