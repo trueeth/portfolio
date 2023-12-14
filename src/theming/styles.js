@@ -124,14 +124,6 @@ export const Main = styled.main`
   @media (${QUERIES.large}) {
     padding-right: ${(props) => props.paddingRight};
   }
-
-  > .growBlack {
-    animation: ${SpreadBlackAnim} 2s forwards;
-  }
-
-  > .growWhite {
-    animation: ${SpreadWhiteAnim} 2s forwards;
-  }
 `;
 
 export const Full = styled.main`
@@ -151,10 +143,10 @@ export const Midi = styled.div`
   height: auto;
   margin: 20px auto 50px auto;
   padding: 30px;
-  max-width: 1110px;
+  max-width: 1200px;
 
   @media (${QUERIES.large}) {
-    margin: 100px auto 170px auto;
+    margin: 60px auto 100px auto;
     padding: 0px;
   }
 `;

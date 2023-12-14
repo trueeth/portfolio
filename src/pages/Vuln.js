@@ -1,8 +1,6 @@
+import React from 'react';
 import styled from 'styled-components';
-import React, { useState } from 'react';
 
-import { Nav, Foot, Lock } from '../components';
-import { Spread } from '../components/switch/styles';
 import QUERIES, { Main, Midi, Full, Heading2, Paragraph, Paragraph2 } from '../theming/styles';
 import {
   Vuln,
@@ -34,21 +32,13 @@ const ImageGrow = styled.img`
   }
 `;
 
-const VulnPage = ({ toggleMode, mode, spread }) => {
-  const [isLocked, setIsLocked] = useState(false);
-  const spreadClass = spread === 'first' ? 'growBlack' : spread === 'second' ? 'growWhite' : '';
-
+const VulnPage = () => {
   return (
     <Main
       style={{
         position: 'relative',
-        overflow: isLocked ? 'hidden' : 'null',
-        height: isLocked ? '100vh' : 'unset',
       }}
     >
-      <Lock isLocked={isLocked} setIsLocked={setIsLocked} />
-      <Spread className={spreadClass} />
-      <Nav mode={mode} toggleMode={toggleMode} />
       <Midi style={{ marginBottom: 100, mixBlendMode: 'difference' }}>
         <Heading2
           style={{
@@ -361,7 +351,6 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
           alt="Low fidelity wireframes that display movie theater seat selection flow"
         />
       </Midi>
-      <Foot />
     </Main>
   );
 };

@@ -39,7 +39,7 @@ const useDarkMode = () => {
     setComponentMounted(true);
   }, []);
 
-  return [mode, toggleMode, spread, componentMounted, disableScroll];
+  return { mode, toggleMode, spread, componentMounted, disableScroll };
 };
 
 export { useDarkMode };

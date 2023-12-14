@@ -45,9 +45,6 @@ const MyProject = ({
             width: 'fit-content',
             maxWidth: 1000,
           }}
-          onMouseDown={(e) => {
-            e.preventDefault();
-          }}
         >
           <Link to={`/${url}`}>{name}</Link>
         </Heading>
