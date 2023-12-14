@@ -227,11 +227,8 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
             >
               My Role
             </Heading2>
-            <Paragraph
-              style={{
-                maxWidth: 700,
-              }}
-            >
+
+            <Paragraph>
               I used a 5-stage Design Thinking model proposed by the Hasso Plattner Institute of
               Design at Stanford (the "d. school").
             </Paragraph>
@@ -358,14 +355,6 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
         >
           <img
             src={Research1}
-            style={{
-              width: 'calc(50% - 50px)',
-              filter: 'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
-            }}
-            alt="Low fidelity wireframes that display movie theater seat selection flow"
-          />{' '}
-          <img
-            src={Research2}
             style={{
               width: 'calc(50% - 50px)',
               filter: 'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',

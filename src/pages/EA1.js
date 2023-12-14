@@ -70,10 +70,6 @@ const EA1 = ({ toggleMode, mode, spread }) => {
           }}
         >
           The client for this application approached me because they were looking to create a
-          product that allows drivers to quickly connect with mechanics when dealing with car
-          problems. They also were loooking to enable hobbyist and mechanics unassociated with any
-          particular shop the opportunity to gig-work and manage their own time.
-          <br /> <br /> I was able to effectively create user personas, competitive audits,
           sketches, wireframes and a final prototype and send over final assets to an engineer in
           around three months.
         </Paragraph2>
