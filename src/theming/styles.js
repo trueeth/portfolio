@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { fadeIn, SpreadWhiteAnim, SpreadBlackAnim } from './animate';
+import { fadeIn } from './animate';
 
 const QUERIES = {
   large: `min-width: 1200px`,
