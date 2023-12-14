@@ -94,6 +94,7 @@
         "argsIgnorePattern": "^_"
       }
     ],
+    "import/no-unresolved": [2, { "caseSensitive": false }],
     // perfectionist
     // https://eslint-plugin-perfectionist.azat.io/
     "perfectionist/sort-named-imports": [
