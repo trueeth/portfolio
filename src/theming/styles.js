@@ -124,14 +124,6 @@ export const Main = styled.main`
   @media (${QUERIES.large}) {
     padding-right: ${(props) => props.paddingRight};
   }
-
-  > .growBlack {
-    animation: ${SpreadBlackAnim} 2s forwards;
-  }
-
-  > .growWhite {
-    animation: ${SpreadWhiteAnim} 2s forwards;
-  }
 `;
 
 export const Full = styled.main`

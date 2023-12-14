@@ -2,14 +2,8 @@ import React from 'react';
 
 import { SwitchBtn } from './styles';
 
-const Switch = ({ toggleMode, mode, spread }) => (
-  <SwitchBtn
-    onMouseDown={(e) => {
-      e.preventDefault();
-      toggleMode();
-    }}
-    onClick={toggleMode}
-  >
+const Switch = ({ toggleMode, mode }) => (
+  <SwitchBtn onClick={toggleMode}>
     {mode === 'light' ? (
       <svg
         width="14"

@@ -1,8 +1,6 @@
+import React from 'react';
 import styled from 'styled-components';
-import React, { useState } from 'react';
 
-import { Lock } from '../components';
-import { Spread } from '../components/switch/styles';
 import QUERIES, { Main, Midi, Full, Heading2, Paragraph, Paragraph2 } from '../theming/styles';
 import {
   Hifi,
@@ -36,20 +34,9 @@ const FlexGroup = styled.div`
   }
 `;
 
-const DevopsPage = ({ toggleMode, mode, spread }) => {
-  const [isLocked, setIsLocked] = useState(false);
-  const spreadClass = spread === 'first' ? 'growBlack' : spread === 'second' ? 'growWhite' : '';
-
+const DevopsPage = () => {
   return (
-    <Main
-      style={{
-        position: 'relative',
-        overflow: isLocked ? 'hidden' : 'null',
-        height: isLocked ? '100vh' : 'unset',
-      }}
-    >
-      <Lock isLocked={isLocked} setIsLocked={setIsLocked} />
-      <Spread className={spreadClass} />
+    <Main>
       <Midi style={{ marginBottom: 100, mixBlendMode: 'difference' }}>
         <Heading2
           style={{

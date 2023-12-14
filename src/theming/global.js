@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import { Heading } from './styles';
+import { SpreadBlackAnim, SpreadWhiteAnim } from './animate';
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -15,12 +16,9 @@ const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-appearance: none;
     -moz-appearance: none;
-    z-index: 99;
+    z-index: 0;
     position:relative;
   }
-
-
-  *:focus {outline: ${({ theme }) => theme.outline}; outline-offset: 3px;}
 
   html {
     display: flex;
@@ -33,6 +31,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-weight: 600;
+    
+  
   }
 
   body {
@@ -45,7 +45,15 @@ const GlobalStyles = createGlobalStyle`
     -webkit-overflow-scrolling: touch;
     font-weight: 200;
     -ms-overflow-style: none;  scrollbar-width: none;
-    ::-webkit-scrollbar { width: 0 !important }
+    ::-webkit-scrollbar { width: 0 !important };
+
+    > .growBlack {
+      animation: ${SpreadBlackAnim} 2s forwards;
+    };
+
+    > .growWhite {
+      animation: ${SpreadWhiteAnim} 2s forwards;
+    };
   }
 
   a {

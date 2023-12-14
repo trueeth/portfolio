@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Spread } from '../components/switch/styles';
 import QUERIES, {
   Main,
   Midi,
@@ -46,12 +45,9 @@ const ImageGrow = styled.img`
   }
 `;
 
-const EA1 = ({ toggleMode, mode, spread }) => {
-  const spreadClass = spread === 'first' ? 'growBlack' : spread === 'second' ? 'growWhite' : '';
-
+const EA1 = () => {
   return (
-    <Main style={{ position: 'relative' }}>
-      <Spread className={spreadClass} />
+    <Main>
       <Midi style={{ marginBottom: 100, mixBlendMode: 'difference' }}>
         <Heading2
           style={{

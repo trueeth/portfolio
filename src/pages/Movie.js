@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Spread } from '../components/switch/styles';
 import QUERIES, { Main, Midi, Full, Heading2, Paragraph, Paragraph2 } from '../theming/styles';
 import {
   Hifi,
@@ -41,12 +40,9 @@ const ImageGrow = styled.img`
   }
 `;
 
-const Movie = ({ toggleMode, mode, spread }) => {
-  const spreadClass = spread === 'first' ? 'growBlack' : spread === 'second' ? 'growWhite' : '';
-
+const Movie = () => {
   return (
-    <Main style={{ position: 'relative' }}>
-      <Spread className={spreadClass} />
+    <Main>
       <Midi style={{ marginBottom: 100, mixBlendMode: 'difference' }}>
         <Heading2
           style={{

@@ -5,8 +5,7 @@ import QUERIES from '../../theming/styles';
 export const Spread = styled.div`
   position: absolute;
   display: block;
-  top: 20px;
-  z-index: -5;
+  z-index: -1;
   background-color: ${({ theme }) => theme.main};
   width: 400vmax;
   height: 400vmax;
@@ -17,7 +16,6 @@ export const Spread = styled.div`
 
 export const SwitchBtn = styled.button`
   position: relative;
-  z-index: -1;
   width: 45px;
   margin-top: -10px;
   height: 45px;

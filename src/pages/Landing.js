@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import { Project } from '../components';
 import { Kap, EA1Image } from '../images';
-import { Spread } from '../components/switch/styles';
 import QUERIES, { Main, Midi, Full, Heading, Heading1, Paragraph } from '../theming/styles';
 
 const Split = styled.div`
@@ -11,7 +10,7 @@ const Split = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  margin: 200px auto;
+  margin: 50px auto 200px auto;
   flex-wrap: wrap;
 
   > * {
@@ -29,18 +28,9 @@ const KapImg = styled.img`
   border-radius: 100px;
 `;
 
-const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
-  const spreadClass = spread === 'first' ? 'growBlack' : spread === 'second' ? 'growWhite' : '';
-
+const Landing = () => {
   return (
-    <Main
-      style={{
-        position: 'relative',
-        overflow: setDisableScroll ? 'hidden' : 'null',
-        height: setDisableScroll ? '100vh' : 'unset',
-      }}
-    >
-      <Spread className={spreadClass} />
+    <Main>
       <Midi>
         <Split>
           <Heading1>

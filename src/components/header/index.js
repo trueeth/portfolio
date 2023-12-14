@@ -6,15 +6,11 @@ import { Switch } from '../switch';
 import { NavCont } from './styles';
 import { Midi } from '../../theming/styles';
 
-const Header = ({ toggleMode, mode, spread }) => {
+const Header = ({ toggleMode, mode }) => {
   const navigate = useNavigate();
   return (
     <Midi style={{ mixBlendMode: 'difference' }}>
-      <NavCont
-        onMouseDown={(e) => {
-          e.preventDefault();
-        }}
-      >
+      <NavCont>
         <Link
           to="/"
           aria-current="page"
@@ -28,11 +24,10 @@ const Header = ({ toggleMode, mode, spread }) => {
             style={{
               position: 'relative',
               display: 'block',
-              zIndex: 2,
             }}
           />
         </Link>
-        <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
+        <Switch mode={mode} toggleMode={toggleMode} />
       </NavCont>
     </Midi>
   );
